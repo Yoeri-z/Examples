@@ -64,20 +64,26 @@ class _LoadingScreenState extends State<LoadingScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(
-              onPressed: () => setState(() {
-                if (circleCount > 0) circleCount--;
-              }),
-              child: const Icon(Icons.remove),
-            ),
-            FloatingActionButton(
-              onPressed: () => setState(() => circleCount++),
-              child: const Icon(Icons.add),
-            ),
-          ],
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              FloatingActionButton(
+                onPressed: () => setState(() {
+                  if (circleCount > 0) circleCount--;
+                }),
+                child: const Icon(Icons.remove),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              FloatingActionButton(
+                onPressed: () => setState(() => circleCount++),
+                child: const Icon(Icons.add),
+              ),
+            ],
+          ),
         ),
         body:
             (_isLoading) ? _loadingIndicator(context) : _startButton(context));
