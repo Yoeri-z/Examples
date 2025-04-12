@@ -1,6 +1,3 @@
 # Yoeri's example repository
 
-this repository contains all the fun little project i made to show on 
-my instagram page and sometimes linked in.
-
-I will be adding to this for the foreseeing future.
+I put stuff in this repository when feel like making a little example app
