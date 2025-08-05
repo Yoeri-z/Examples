@@ -1,0 +1,5 @@
+package com.example.drag_test
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
